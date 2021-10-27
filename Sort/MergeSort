@@ -15,6 +15,7 @@ public class Mergesort {
 
 
         System.out.println("정렬후:");
+        MergeSortClass(arr,1,16)
         for(int i=1; i<= arrSize; i++)
             System.out.print("  " + arr[i]);
 
