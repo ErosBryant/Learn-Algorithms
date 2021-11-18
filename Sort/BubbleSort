@@ -25,9 +25,9 @@ public class BubbleSort {
                  *  서로 원소의 위치를 교환한다.
                  */
                 if(a[j] > a [j + 1]) {
-                    int temp = a[i];
-                    a[i] = a[j];
-                    a[j] = temp;
+                    int temp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = temp;
                 }
             }
         }
