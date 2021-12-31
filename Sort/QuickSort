@@ -1,20 +1,20 @@
 public class QuickSort {
     public static void main(String[] args) {
         int arr[] = {100, 30, 20, 10, 50, 70, 40, 90, 80, 60};
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++) //정렬전
             System.out.print(arr[i]+" ");
 
         System.out.println();
-        quick(arr);
-        for(int data:arr){
+        quick(arr);   //함수 호출
+        for(int data:arr){ // 정렬 후 출력
             System.out.print(data+" ");
         }
     }
 
-    static void quick(int arr[]) {
+    static void quick(int arr[]) {    //배열만 있으면 
         quick(arr,0,arr.length-1);
     }
-    static void quick(int arr[],int start,int end){
+    static void quick(int arr[],int start,int end){ //함수 오버로드
         int part2=partition(arr,start,end);
         if(start<part2-1){
             quick(arr,start,part2-1);
@@ -24,7 +24,7 @@ public class QuickSort {
         }
     }
     static int partition(int arr[],int start,int end){
-        int pivot= arr[(start+end)/2];
+        int pivot= arr[(start+end)/2];  // 기준 선택 
         while (start<=end){
             while(arr[start]<pivot) start++;
             while (arr[end]>pivot) end--;
