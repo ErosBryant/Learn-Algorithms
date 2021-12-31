@@ -17,7 +17,7 @@ public class QuickSort {
     static void quick(int arr[],int start,int end){ //함수 오버로드
         int part2=partition(arr,start,end);
         if(start<part2-1){
-            quick(arr,start,part2-1);
+            quick(arr,start,part2-1);  //재귀
         }
         if(part2<end){
             quick(arr,part2,end);
@@ -27,7 +27,7 @@ public class QuickSort {
         int pivot= arr[(start+end)/2];  // 기준 선택 
         while (start<=end){
             while(arr[start]<pivot) start++;
-            while (arr[end]>pivot) end--;
+            while(arr[end]>pivot) end--;
             if(start<=end){
                 swap(arr,start,end);
                 start++;
@@ -36,7 +36,7 @@ public class QuickSort {
         }
         return start;
     }
-    static void swap(int arr[],int start,int end){
+    static void swap(int arr[],int start,int end){   // 단순 교환
         int temp=arr[start];
         arr[start]=arr[end];
         arr[end]=temp;
