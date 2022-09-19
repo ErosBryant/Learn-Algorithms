@@ -175,6 +175,9 @@ def merge(left, right):
         right_point += 1
 
     return merged
+
+arr = [69, 10, 30, 2, 16, 8, 31, 22]
+print(merge_sort(arr))
 ```
 
 ### java 코드
